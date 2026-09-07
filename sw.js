@@ -1,4 +1,4 @@
-const CACHE_NAME = "pickpath-v1";
+const CACHE_NAME = "pickpath-v2";
 const APP_FILES = [
   "./",
   "./index.html",
