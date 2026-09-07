@@ -514,20 +514,25 @@
   "use strict";
 
   // ----- 1) Demo warehouse data -----
-  // x/y are simple warehouse grid coordinates, not real Partify locations.
   const LOCATIONS = {
-    START: { x: 0,  y: 7, label: "START" },
-    PACK:  { x: 10, y: 7, label: "PACK"  },
+  START: { x: 0,  y: 7, label: "START" },
+  PACK:  { x: 10, y: 7, label: "PACK" },
 
-    A07: { x: 2, y: 1, label: "A07" },
-    A11: { x: 4, y: 1, label: "A11" },
-    B12: { x: 8, y: 1, label: "B12" },
-    B04: { x: 2, y: 4, label: "B04" },
-    C04: { x: 4, y: 4, label: "C04" },
-    C09: { x: 8, y: 4, label: "C09" },
-    D02: { x: 2, y: 6, label: "D02" },
-    D08: { x: 4, y: 6, label: "D08" },
-    E03: { x: 8, y: 6, label: "E03" }
+  // Top row
+  A07: { x: 2, y: 1, label: "A07" },
+  A11: { x: 4, y: 1, label: "A11" },
+  B12: { x: 8, y: 1, label: "B12" },
+
+  // Middle row
+  B04: { x: 2, y: 3, label: "B04" },
+  C04: { x: 4, y: 3, label: "C04" },
+  C09: { x: 8, y: 3, label: "C09" },
+
+  // Bottom row
+  D02: { x: 2, y: 5, label: "D02" },
+  D08: { x: 4, y: 5, label: "D08" },
+  E03: { x: 8, y: 5, label: "E03" }
+  
   };
 
   const ORDERS = [
@@ -588,7 +593,7 @@
     // Maps x=0..10 and y=0..8 into the SVG.
     return {
       x: 50 + p.x * 52,
-      y: 390 - p.y * 45
+      y: 65 + p.y * 45
     };
   }
 
